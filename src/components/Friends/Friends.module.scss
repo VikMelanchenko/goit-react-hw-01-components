@@ -1,6 +1,7 @@
 .friendList {
-  width: 450px;
+  width: 30%;
   margin: 0 auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -9,28 +10,31 @@
     width: 100%;
     align-items: center;
     display: flex;
-    margin: 5px 0 20px 0;
+    margin-bottom: 20px;
     padding: 12px 12px 10px 15px;
     box-shadow: 0 2px 5px white;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 15px;
 
     .avatar {
       padding: 7px;
     }
-    .status {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      margin-right: 10px;
-      display: block;
-
-      .online {
-        background-color: green;
-      }
-      .offline {
-        background-color: red;
-      }
-    }
   }
+}
+
+.status {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: block;
+}
+
+.online {
+  composes: status;
+  background-color: green;
+}
+.offline {
+  composes: status;
+  background-color: red;
 }
